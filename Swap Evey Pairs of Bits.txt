@@ -1,0 +1,22 @@
+Swap Every Pairs of Bits of given Number
+You are given an Integer N your task is to swap every pair of bits of binary representation of given Number.
+
+C++ Code;
+#include <bits/stdc++.h>
+using namespace std;
+int swapEveryPairsOfBits(int N){
+	
+	/*((n & 0xAAAAAAAA )>>1) it Extract the high bit position and shipt to low bit position
+	(n & 0x55555555)<<1 it exptract the low bit position and shipt to high bit possition.
+	OR of above two expresion give the swap of every pair of bits. */
+	
+	 return ((N & 0xAAAAAAAA)>>1)|((N & 0x55555555)<<1);
+}
+
+int main() {
+	// your code goes here
+	int N;
+	cin>>N;
+	cout<<swapEveryPairsOfBits(N)<<endl;
+	return 0;
+}
