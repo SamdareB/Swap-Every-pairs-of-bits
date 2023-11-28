@@ -6,8 +6,8 @@ C++ Code;
 using namespace std;
 int swapEveryPairsOfBits(int N){
 	
-	/*((n & 0xAAAAAAAA )>>1) it Extract the high bit position and shipt to low bit position
-	(n & 0x55555555)<<1 it exptract the low bit position and shipt to high bit possition.
+	/*((n & 0xAAAAAAAA )>>1) it Extract the high bit position and shift to low bit position
+	(n & 0x55555555)<<1 it exptract the low bit position and shift to high bit possition.
 	OR of above two expresion give the swap of every pair of bits. */
 	
 	 return ((N & 0xAAAAAAAA)>>1)|((N & 0x55555555)<<1);
